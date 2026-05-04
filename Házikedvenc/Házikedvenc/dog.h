@@ -11,6 +11,17 @@ public:
 	Dog();
 	Dog(String nev, size_t elettartam, String szarmazas, size_t tipus, size_t szortipus, size_t meret, size_t FCI);
 	void kiir() override;
+
+	//GETTEREK
+	size_t getSzortipus() const {
+		return szortipus;
+	}
+	size_t getMeret() const {
+		return meret;
+	}
+	size_t getFCI() const {
+		return FCI;
+	}
 	virtual ~Dog() {}
 };
 
