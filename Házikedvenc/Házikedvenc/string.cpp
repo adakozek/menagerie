@@ -133,3 +133,13 @@ std::istream& operator>>(std::istream& is, String& s) {
 	return is;
 
 }
+
+std::ostream& operator<<(std::ostream& os, const String& s) {
+	os << s.c_str();
+	return os;
+}
+
+std::ostream& operator<<(std::ostream& os, String& s) {
+	os << s.c_str();
+	return os;
+}

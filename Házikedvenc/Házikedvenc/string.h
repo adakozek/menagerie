@@ -2,6 +2,7 @@
 #define STRING_H
 
 #include <iostream>
+#include "string.h"
 
 class String {
 	char* str;
@@ -30,5 +31,8 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const String& s); // kiírás operator
 	friend std::istream& operator>>(std::istream& is, String& s); // beolvasás operator
 };
+
+std::ostream& operator<<(std::ostream& os, const String& s);
+std::istream& operator>>(std::istream& is, String& s);
 
 #endif

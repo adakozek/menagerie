@@ -36,7 +36,8 @@ public:
 			for (size_t i = 0; i < other.meret; i++) {
 				this->tomb[i] = other.tomb[i];
 			}
-		})
+		}
+		return *this;
 	}
 	Hetero operator+(const Hetero& other) const {
 		Hetero result(this->meret + other.meret);
@@ -63,5 +64,17 @@ public:
 		return tomb[i];
 	}
 };
+
+std::ostream& operator<<(std::ostream& os, const Hetero<String>& hetero) {
+	os << "[";
+	for (size_t i = 0; i < hetero.size(); i++) {
+		os << hetero[i];
+		if (i < hetero.size() - 1) {
+			os << ", ";
+		}
+	}
+	os << "]";
+	return os;
+}
 
 #endif

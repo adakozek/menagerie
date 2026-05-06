@@ -2,6 +2,7 @@
 #define BIRD_H
 
 #include "pet.h"
+#include "string.h"
 
 class Bird : public Pet {
 	size_t szarnyfesztav;

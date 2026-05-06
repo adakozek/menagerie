@@ -166,21 +166,21 @@ int main() {
 	}END
 
 	TEST(Bird, konstruktor){
-		Bird b(String("Tweety"), 5, String("USA"), MADAR, true);
+		Bird b(String("Tweety"), 5, String("USA"), MADAR, 2, true);
 		EXPECT_EQ("Tweety", b.getNev()) << "A Bird konstruktor nem helyesen inicializálta a nev attribútumot.";
 		EXPECT_EQ(5, b.getElettartam()) << "A Bird konstruktor nem helyesen inicializálta az elettartam attribútumot.";
 		EXPECT_EQ("USA", b.getSzarmazas()) << "A Bird konstruktor nem helyesen inicializálta a szarmazas attribútumot.";
 		EXPECT_EQ(MADAR, b.getTipus()) << "A Bird konstruktor nem helyesen inicializálta a tipus attribútumot.";
-		EXPECT_TRUE(b.isTudRepulni()) << "A Bird konstruktor nem helyesen inicializálta a tudRepulni attribútumot.";
+		EXPECT_TRUE(b.getRopkepes()) << "A Bird konstruktor nem helyesen inicializálta a tudRepulni attribútumot.";
 	}END
 
 	TEST(Rept, konstruktor){
-		Rept r(String("Kígyó"), 20, String("Afrika"), HULLO, false);
+		Rept r(String("Kígyó"), 20, String("Afrika"), HULLO, 1, false, 1);
 		EXPECT_EQ("Kígyó", r.getNev()) << "A Rept konstruktor nem helyesen inicializálta a nev attribútumot.";
 		EXPECT_EQ(20, r.getElettartam()) << "A Rept konstruktor nem helyesen inicializálta az elettartam attribútumot.";
 		EXPECT_EQ("Afrika", r.getSzarmazas()) << "A Rept konstruktor nem helyesen inicializálta a szarmazas attribútumot.";
 		EXPECT_EQ(HULLO, r.getTipus()) << "A Rept konstruktor nem helyesen inicializálta a tipus attribútumot.";
-		EXPECT_FALSE(r.isMerevTestu()) << "A Rept konstruktor nem helyesen inicializálta a merevTestu attribútumot.";
+		EXPECT_FALSE(r.getMerges()) << "A Rept konstruktor nem helyesen inicializálta a merevTestu attribútumot.";
 	}END
 
 	TEST(Hetero, konstruktor) {
