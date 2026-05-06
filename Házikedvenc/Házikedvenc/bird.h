@@ -9,7 +9,8 @@ class Bird : public Pet {
 	bool ropkepes;
 public:
 	Bird(): szarnyfesztav(-1), ropkepes(true) {}
-	Bird(String nev, size_t elettartam, String szarmazas, size_t tipus, size_t szarnyfesztav, bool ropkepes): Pet(nev, elettartam, szarmazas,tipus), szarnyfesztav(-1), ropkepes(true) {}
+	Bird(String nev, size_t elettartam, String szarmazas, size_t tipus, size_t szarnyfesztav, bool ropkepes)
+		: Pet(nev, elettartam, szarmazas,tipus), szarnyfesztav(-1), ropkepes(true) {}
 
 	void kiir() override;
 	virtual ~Bird() {}

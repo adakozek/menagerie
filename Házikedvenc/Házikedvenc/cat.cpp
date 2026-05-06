@@ -13,21 +13,20 @@ void Cat::kiir() {
 	std::cout << "Elettartam: " << getElettartam() << std::endl;
 	std::cout << "Szarmazas: " << getSzarmazas() << std::endl;
 	std::cout << "Tipus: " << "Macska" << std::endl;
-	if (szortipus == 0) {
-		std::cout << "Szortipus: Rövid szőrű" << std::endl;
-	}
-	else if (szortipus == 1) {
-		std::cout << "Szortipus: Hosszú szőrű" << std::endl;
-	}else if (szortipus == 2) {
-		std::cout << "Szortipus: Szőrtelen" << std::endl;
-	}else {
-		std::cout << "Szortipus: Ismeretlen" << std::endl;
-	}
+	if (szortipus == ROVIDSZORU) {
+        std::cout << "Szortipus: Rovid szoru" << std::endl;
+    } else if (szortipus == HOSSZUSZORU) {
+        std::cout << "Szortipus: Hosszu szoru" << std::endl;
+    } else if (szortipus == KOPASZ) {
+        std::cout << "Szortipus: Kopasz" << std::endl;
+    } else {
+        std::cout << "Szortipus: Ismeretlen" << std::endl;
+    }
 	if (meret == 1) {
 		std::cout << "Meret: Kicsi" << std::endl;
 	}
 	else if (meret == 2) {
-		std::cout << "Meret: Közepes" << std::endl;
+		std::cout << "Meret: Kozepes" << std::endl;
 	}
 	else if (meret == 3) {
 		std::cout << "Meret: Nagy" << std::endl;

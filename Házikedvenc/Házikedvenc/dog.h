@@ -23,6 +23,17 @@ public:
 		return FCI;
 	}
 	virtual ~Dog() {}
+
+	//SETTEREK
+	void setSzortipus(size_t szortipus) {
+		this->szortipus = szortipus;
+	}
+	void setMeret(size_t meret) {
+		this->meret = meret;
+	}
+	void setFCI(size_t FCI) {
+		this->FCI = FCI;
+	}
 };
 
 #endif
