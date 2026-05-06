@@ -19,7 +19,8 @@ class Pet {
 	size_t tipus; // 0: kutya, 1: macska, 2: madár, 3: hüllő
 public:
 	Pet() : nev(""), elettartam(-1), szarmazas(""), tipus(-1) {} // default konstruktor
-	Pet(String nev, size_t elettartam, String szarmazas, size_t tipus) : nev(nev), elettartam(elettartam), szarmazas(szarmazas), tipus(tipus) {} // konstruktor
+	Pet(String nev, size_t elettartam, String szarmazas, size_t tipus)
+		: nev(nev), elettartam(elettartam), szarmazas(szarmazas), tipus(tipus) {} // konstruktor
 	virtual void kiir() = 0; // tisztán virtuális függvény a kiíráshoz
 	bool operator==(const Pet& other) const { // egyenlőség operátor a pet osztályhoz
 		return nev == other.nev && elettartam == other.elettartam && szarmazas == other.szarmazas && tipus == other.tipus;
